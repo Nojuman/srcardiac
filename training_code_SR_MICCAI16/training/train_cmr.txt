@@ -1,0 +1,1 @@
+/vol/biomedic/users/oo2113/lib/caffe/examples/SRCNN/3D_conv_noise_L1_norm_finaltrain_deconv/train_cmr.h5

@@ -1,0 +1,32 @@
+# The train/test net protocol buffer definition
+net: "SRCNN_net_cmr.prototxt"
+
+# test_iter specifies how many forward passes the test should carry out. In our case,
+# we have test batch size 10 and 556 test iterations, covering almost the full 5560 patches.
+test_iter: 556
+
+# Carry out testing every 500 training iterations.
+test_interval: 500
+
+# The base learning rate, momentum and the weight decay of the network.
+type: "Adam"
+base_lr: 0.0001
+lr_policy: "fixed"
+momentum: 0.9
+momentum2: 0.995
+weight_decay: 0.0001
+
+# The maximum number of iterations
+# For 380000 training samples and a batch size of 256, one epoch is about 1484 iterations.
+# So 300000 iterations make about 200 epochs.
+max_iter: 300000
+
+# Display every 500 iterations
+display: 500
+
+# snapshot intermediate results
+snapshot: 5000
+snapshot_prefix: "tmp/SRCNN_cmr"
+
+# solver mode: CPU or GPU
+solver_mode: GPU
